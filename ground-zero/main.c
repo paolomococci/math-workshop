@@ -1,5 +1,6 @@
 /*
  * main.c
+ * 
  * Copyright (C) 2019 paolo mococci
  * 
  * This program is free software: you can redistribute it and/or modify it
