@@ -21,15 +21,16 @@
 #define SIEVE_H
 
 namespace pm {
-
-    class Sieve {
-    public:
-        Sieve();
-        Sieve(const Sieve& orig);
-        virtual ~Sieve();
-    private:
-
-    };
-
+    class Sieve;
 }
+
+class pm::Sieve {
+public:
+    Sieve();
+    Sieve(const pm::Sieve& orig);
+    virtual ~Sieve();
+private:
+    unsigned long *endRangeUnsignedLongPointer;
+};
+
 #endif
