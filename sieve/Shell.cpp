@@ -19,15 +19,13 @@
 
 #include "Shell.h"
 
-namespace pm {
+using namespace pm;
 
-    Shell::Shell() {
-    }
+Shell::Shell() {
+}
 
-    Shell::Shell(const Shell& orig) {
-    }
+Shell::Shell(const Shell& orig) {
+}
 
-    Shell::~Shell() {
-    }
-
+Shell::~Shell() {
 }
