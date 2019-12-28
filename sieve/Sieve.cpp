@@ -19,15 +19,13 @@
 
 #include "Sieve.h"
 
-namespace pm {
+pm::Sieve::Sieve() {
+    endRangeUnsignedLongPointer = new unsigned long;
+}
 
-    Sieve::Sieve() {
-    }
+pm::Sieve::Sieve(const pm::Sieve& orig) {
+}
 
-    Sieve::Sieve(const Sieve& orig) {
-    }
-
-    Sieve::~Sieve() {
-    }
-
+pm::Sieve::~Sieve() {
+    delete endRangeUnsignedLongPointer;
 }
