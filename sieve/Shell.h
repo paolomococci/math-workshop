@@ -21,15 +21,16 @@
 #define SHELL_H
 
 namespace pm {
-
-    class Shell {
-    public:
-        Shell();
-        Shell(const Shell& orig);
-        virtual ~Shell();
-    private:
-
-    };
-
+    class Shell;
 }
+
+class pm::Shell {
+public:
+    Shell();
+    Shell(const pm::Shell& orig);
+    virtual ~Shell();
+private:
+
+};
+
 #endif
