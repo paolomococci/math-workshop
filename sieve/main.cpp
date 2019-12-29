@@ -23,5 +23,5 @@ using namespace pm;
 
 int main(int argc, char** argv) {
 
-    return 0;
+    std::exit(EXIT_SUCCESS);
 }
