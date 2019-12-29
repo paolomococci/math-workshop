@@ -24,6 +24,11 @@ pm::Sieve::Sieve() {
 }
 
 pm::Sieve::Sieve(const pm::Sieve& orig) {
+    endRangeUnsignedLongPointer = orig.endRangeUnsignedLongPointer;
+}
+
+pm::Sieve::Sieve(pm::Sieve&& orig) {
+    endRangeUnsignedLongPointer = orig.endRangeUnsignedLongPointer;
 }
 
 pm::Sieve::~Sieve() {
