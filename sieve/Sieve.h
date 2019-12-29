@@ -28,6 +28,7 @@ class pm::Sieve {
 public:
     Sieve();
     Sieve(const pm::Sieve& orig);
+    Sieve(pm::Sieve&& orig);
     virtual ~Sieve();
 private:
     unsigned long *endRangeUnsignedLongPointer;
