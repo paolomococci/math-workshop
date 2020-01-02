@@ -22,6 +22,24 @@
 using namespace pm;
 
 int main(int argc, char** argv) {
+    
+    unsigned long umpteenth;
+    
+    if (argc == 2) {
+        bool isNumber = false;
+        char* charPointer = argv[1];
+        while (*charPointer != '\0') {
+            if (*charPointer < '0' || *charPointer > '9') {
+                isNumber = false;
+            } else {
+                isNumber = true;
+            }
+        }
+
+        if (isNumber) {
+            umpteenth = atoi(argv[1]);
+        }
+    }
 
     std::exit(EXIT_SUCCESS);
 }
