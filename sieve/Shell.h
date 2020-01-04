@@ -27,10 +27,17 @@ namespace pm {
 class pm::Shell {
 public:
     Shell();
+    Shell(int nth, char** args);
     Shell(const pm::Shell& orig);
     virtual ~Shell();
+    int getArgc();
+    char** getArgv();
+    void setArgc(int nth);
+    void setArgv(char** args);
+    unsigned long verify();
 private:
-
+    int argc;
+    char** argv;
 };
 
 #endif
