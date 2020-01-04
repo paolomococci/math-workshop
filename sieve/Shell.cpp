@@ -18,14 +18,55 @@
  */
 
 #include "Shell.h"
+#include <cstdlib>
 
 using namespace pm;
 
 Shell::Shell() {
 }
 
+Shell::Shell(int nth, char** args) {
+    this->argc = nth;
+    this->argv = args;
+}
+
 Shell::Shell(const Shell& orig) {
 }
 
 Shell::~Shell() {
+}
+
+int Shell::getArgc() {
+    return this->argc;
+}
+
+char** Shell::getArgv() {
+    return this->argv;
+}
+
+void Shell::setArgc(int nth) {
+    this->argc = nth;
+}
+
+void Shell::setArgv(char** args) {
+    this->argv = args;
+}
+
+unsigned long Shell::verify() {
+    unsigned long umpteenth = 0UL;
+    if (this->argc == 2) {
+        bool isNumber = false;
+        char* charPointer = this->argv[1];
+        while (*charPointer != '\0') {
+            if (*charPointer < '0' || *charPointer > '9') {
+                isNumber = false;
+            } else {
+                isNumber = true;
+            }
+        }
+        if (isNumber) {
+            umpteenth = atoi(this->argv[1]);
+        }
+    }
+    return umpteenth;
 }
