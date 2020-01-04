@@ -20,7 +20,7 @@
 #ifndef SYSTEM_H
 #define SYSTEM_H
 
-#include <cstdlib>
+#include <iostream>
 
 #include "Shell.h"
 #include "Sieve.h"
