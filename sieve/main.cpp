@@ -25,8 +25,8 @@ using namespace pm;
 int main(int argc, char** argv) {
     
     pm::Shell shell(argc, argv);
-    
-    std::cout << shell.verify() << std::endl;
+    pm::Sieve sieve;
+    sieve.sift(shell.verify());
 
     std::exit(EXIT_SUCCESS);
 }
