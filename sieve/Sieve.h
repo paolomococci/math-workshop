@@ -30,8 +30,8 @@ public:
     Sieve(const pm::Sieve& orig);
     Sieve(pm::Sieve&& orig);
     virtual ~Sieve();
+    void sift(unsigned long nth);
 private:
-    unsigned long *endRangeUnsignedLongPointer;
 };
 
 #endif
