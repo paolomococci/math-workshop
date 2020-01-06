@@ -1,2 +1,2 @@
 # sieve
-Demo of Eratosthenes sieve.
+Sieve of Eratosthenes implementation.
