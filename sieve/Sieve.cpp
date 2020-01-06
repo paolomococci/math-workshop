@@ -17,20 +17,22 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <iostream>
+#include <vector>
 #include "Sieve.h"
 
-pm::Sieve::Sieve() {
-    endRangeUnsignedLongPointer = new unsigned long;
-}
+using namespace std;
 
-pm::Sieve::Sieve(const pm::Sieve& orig) {
-    endRangeUnsignedLongPointer = orig.endRangeUnsignedLongPointer;
-}
+pm::Sieve::Sieve() {}
 
-pm::Sieve::Sieve(pm::Sieve&& orig) {
-    endRangeUnsignedLongPointer = orig.endRangeUnsignedLongPointer;
-}
+pm::Sieve::Sieve(const pm::Sieve& orig) {}
 
-pm::Sieve::~Sieve() {
-    delete endRangeUnsignedLongPointer;
+pm::Sieve::Sieve(pm::Sieve&& orig) {}
+
+pm::Sieve::~Sieve() {}
+
+void pm::Sieve::sift(unsigned long nth) {
+    std::vector<bool> booleanSieveVector;
+    unsigned long index;
+    std::cout << std::endl;
 }
