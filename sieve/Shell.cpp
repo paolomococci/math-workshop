@@ -19,6 +19,7 @@
 
 #include "Shell.h"
 #include <cstdlib>
+#include <iostream>
 
 using namespace pm;
 
@@ -55,18 +56,28 @@ void Shell::setArgv(char** args) {
 unsigned long Shell::verify() {
     unsigned long umpteenth = 0UL;
     if (this->argc == 2) {
-        bool isNumber = false;
         char* charPointer = this->argv[1];
         while (*charPointer != '\0') {
             if (*charPointer < '0' || *charPointer > '9') {
-                isNumber = false;
-            } else {
-                isNumber = true;
+                std::cout << "error: the second argument on command line is not a number" << std::endl;
+                std::exit(EXIT_FAILURE);
             }
+            charPointer++;
         }
-        if (isNumber) {
+        try {
             umpteenth = atoi(this->argv[1]);
+        } catch (const std::overflow_error& oe) {
+            std::cout << "error: overflow" << std::endl;
+            std::exit(EXIT_FAILURE);
+        } catch (const std::runtime_error& re) {
+            std::cout << "error: runtime" << std::endl;
+            std::exit(EXIT_FAILURE);
+        } catch (const std::exception& e) {
+            std::cout << "exception" << std::endl;
+            std::exit(EXIT_FAILURE);
         }
+    } else {
+        std::cout << "oversight: please enter a number after the command" << std::endl;
     }
     return umpteenth;
 }
