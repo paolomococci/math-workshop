@@ -41,6 +41,19 @@ void pm::Sieve::sift(unsigned long nth) {
     try {
         std::vector<bool> booleanSieveVector(++nth, true);
         std::vector<bool>::iterator booleanSieveIterator = booleanSieveVector.begin();
-    // TODO
-    std::cout << std::endl;
+        // TODO
+        std::cout << std::endl;
+    } catch (const std::range_error& rangeError) {
+        std::cout << "error: range" << std::endl;
+        std::exit(EXIT_FAILURE);
+    } catch (const std::overflow_error& overflowError) {
+        std::cout << "error: overflow" << std::endl;
+        std::exit(EXIT_FAILURE);
+    } catch (const std::runtime_error& runtimeError) {
+        std::cout << "error: runtime" << std::endl;
+        std::exit(EXIT_FAILURE);
+    } catch (const std::exception& exception) {
+        std::cout << "exception" << std::endl;
+        std::exit(EXIT_FAILURE);
+    }
 }
