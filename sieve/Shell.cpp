@@ -66,13 +66,13 @@ unsigned long Shell::verify() {
         }
         try {
             umpteenth = atoi(this->argv[1]);
-        } catch (const std::overflow_error& oe) {
+        } catch (const std::overflow_error& overflowError) {
             std::cout << "error: overflow" << std::endl;
             std::exit(EXIT_FAILURE);
-        } catch (const std::runtime_error& re) {
+        } catch (const std::runtime_error& runtimeError) {
             std::cout << "error: runtime" << std::endl;
             std::exit(EXIT_FAILURE);
-        } catch (const std::exception& e) {
+        } catch (const std::exception& exception) {
             std::cout << "exception" << std::endl;
             std::exit(EXIT_FAILURE);
         }
