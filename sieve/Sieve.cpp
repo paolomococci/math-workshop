@@ -39,10 +39,23 @@ pm::Sieve::~Sieve() {
 
 void pm::Sieve::sift(unsigned long nth) {
     try {
+        unsigned long indexOne;
         std::vector<bool> booleanSieveVector(++nth, true);
-        std::vector<bool>::iterator booleanSieveIterator = booleanSieveVector.begin();
-        // TODO
-        std::cout << std::endl;
+        for (indexOne = 2; indexOne < nth; indexOne++) {
+            if (booleanSieveVector[indexOne]) {
+                for (unsigned long indexTwo = indexOne; (indexTwo * indexOne) < nth; indexTwo++) {
+                    booleanSieveVector[indexOne * indexTwo] = false;
+                }
+            }
+        }
+        std::cout << '{' << ' ';
+        for (indexOne = 2; indexOne < nth; indexOne++) {
+            if (booleanSieveVector[indexOne]) {
+                std::cout << indexOne << ' ';
+            }
+        }
+        std::cout << '}' << std::endl;
+        booleanSieveVector.clear();
     } catch (const std::range_error& rangeError) {
         std::cout << "error: range" << std::endl;
         std::exit(EXIT_FAILURE);
