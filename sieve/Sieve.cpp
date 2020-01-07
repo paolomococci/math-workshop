@@ -18,22 +18,29 @@
  */
 
 #include <iostream>
+#include <iterator>
 #include <vector>
+
 #include "Sieve.h"
 
 using namespace std;
 
-pm::Sieve::Sieve() {}
+pm::Sieve::Sieve() {
+}
 
-pm::Sieve::Sieve(const pm::Sieve& orig) {}
+pm::Sieve::Sieve(const pm::Sieve& orig) {
+}
 
-pm::Sieve::Sieve(pm::Sieve&& orig) {}
+pm::Sieve::Sieve(pm::Sieve&& orig) {
+}
 
-pm::Sieve::~Sieve() {}
+pm::Sieve::~Sieve() {
+}
 
 void pm::Sieve::sift(unsigned long nth) {
-    std::vector<bool> booleanSieveVector;
-    unsigned long index;
+    try {
+        std::vector<bool> booleanSieveVector(++nth, true);
+        std::vector<bool>::iterator booleanSieveIterator = booleanSieveVector.begin();
     // TODO
     std::cout << std::endl;
 }
