@@ -21,23 +21,26 @@
 
 namespace paolomococci {
 
-Shell::Shell() {
-	// TODO constructor
-
+Shell::Shell(int argc, char** argv) {
+	this->argIndex = argc;
+	this->argVector = argv;
 }
 
 Shell::~Shell() {
 	// TODO destructor
 }
 
-Shell::Shell(const Shell &other) {
-	// TODO copy constructor
-
+int Shell::getArgIndex() {
+	return this->argIndex;
 }
 
-Shell::Shell(Shell &&other) {
-	// TODO move constructor
+char** Shell::getArgVector() {
+	return this->argVector;
+}
 
+bool Shell::verify() {
+	// TODO
+	return true;
 }
 
 }
