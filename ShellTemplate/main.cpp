@@ -28,8 +28,9 @@ using namespace paolomococci;
 int main(int argc, char** argv) {
 
 	paolomococci::Shell shell(argc, argv);
+	paolomococci::Main main;
 
-	std::cout << "exit success" << std::endl;
+	main.getHello();
 
     std::exit(EXIT_SUCCESS);
 }
