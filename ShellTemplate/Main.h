@@ -26,6 +26,7 @@ class Main {
 public:
 	Main();
 	virtual ~Main();
+	void getHello();
 };
 
 }
