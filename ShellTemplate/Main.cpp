@@ -17,7 +17,11 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <iostream>
+
 #include "Main.h"
+
+using namespace std;
 
 namespace paolomococci {
 
@@ -28,6 +32,10 @@ Main::Main() {
 
 Main::~Main() {
 	// TODO destructor
+}
+
+void Main::getHello() {
+	std::cout << "hello" << std::endl;
 }
 
 }
