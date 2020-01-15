@@ -36,7 +36,7 @@ public:
 	Shell& operator=(Shell &&other);
 	int getArgIndex();
 	char** getArgVector();
-	bool verify();
+	void verify();
 	std::vector<double> getValues();
 	void errorNaN();
 	void error(char* error);
