@@ -39,7 +39,7 @@ public:
 	void verify();
 	std::vector<double> getValues();
 	void errorNaN();
-	void error(char* error);
+	void error();
 private:
 	int argIndex;
 	char** argVector;
