@@ -17,6 +17,8 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include "Shell.h"
+
 #ifndef MAIN_H_
 #define MAIN_H_
 
@@ -25,6 +27,7 @@ namespace paolomococci {
 class Main {
 public:
 	Main();
+	Main(int argc, char** argv);
 	virtual ~Main();
 	void getHello();
 };
