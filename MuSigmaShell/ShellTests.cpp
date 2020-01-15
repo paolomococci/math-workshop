@@ -22,7 +22,13 @@
 #include "Shell.h"
 
 namespace paolomococci {
+
+int main() {
 	int argc = 2;
-	char** argv = {"", "12.5"};
+	char **argv = { "", "12.5" };
 	paolomococci::Shell shell(argc, argv);
+	assert(shell.getArgIndex() == 2);
+	std::exit(EXIT_SUCCESS);
+}
+
 }
