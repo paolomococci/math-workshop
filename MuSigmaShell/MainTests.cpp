@@ -17,8 +17,15 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <cassert>
+
 #include "Main.h"
 
 namespace paolomococci {
+
+int main() {
+    paolomococci::Main main;
+    std::exit(EXIT_SUCCESS);
+}
 
 }
