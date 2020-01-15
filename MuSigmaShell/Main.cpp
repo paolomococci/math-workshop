@@ -26,8 +26,11 @@ using namespace std;
 namespace paolomococci {
 
 Main::Main() {
-	// TODO constructor
 
+}
+
+Main::Main(int argc, char** argv) {
+	paolomococci::Shell shell(argc, argv);
 }
 
 Main::~Main() {
