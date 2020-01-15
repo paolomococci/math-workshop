@@ -39,11 +39,50 @@ char** Shell::getArgVector() {
 	return this->argVector;
 }
 
-bool Shell::verify() {
+void Shell::verify() {
 	int dotCount = 0;
-	bool check = true;
-	// TODO
-	return check;
+	if (this->argIndex > 1) {
+		for (int index = 1; index < this->argIndex; index++) {
+			char *charPointer = this->argVector[index];
+			while (*charPointer != '\0') {
+				switch (*charPointer) {
+					case '.':
+						dotCount++;
+						charPointer++;
+						break;
+					case '0':
+					case '1':
+					case '2':
+					case '3':
+					case '4':
+					case '5':
+					case '6':
+					case '7':
+					case '8':
+					case '9':
+						charPointer++;
+						break;
+					default:
+						this->errorNaN();
+						break;
+				}
+				if (dotCount > 1) this->errorNaN();
+				try {
+					this->values.push_back(atof(this->argVector[1]));
+				} catch (const std::overflow_error &overflowError) {
+					this->error("error: overflow");
+				} catch (const std::runtime_error &runtimeError) {
+					this->error("error: runtime");
+				} catch (const std::exception &exception) {
+					this->error("exception");
+				}
+			}
+		}
+	} else {
+		std::cout
+			<< "oversight: please enter a number after the command"
+			<< std::endl;
+	}
 }
 
 std::vector<double> Shell::getValues() {
