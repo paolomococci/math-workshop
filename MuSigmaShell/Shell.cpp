@@ -24,11 +24,10 @@ namespace paolomococci {
 Shell::Shell(int argc, char **argv) {
 	this->argIndex = argc;
 	this->argVector = argv;
-	this->values = new std::vector<double>;
 }
 
 Shell::~Shell() {
-	delete this->values;
+
 }
 
 int Shell::getArgIndex() {
@@ -69,12 +68,8 @@ void Shell::verify() {
 				if (dotCount > 1) this->errorNaN();
 				try {
 					this->values.push_back(atof(this->argVector[1]));
-				} catch (const std::overflow_error &overflowError) {
-					this->error("error: overflow");
-				} catch (const std::runtime_error &runtimeError) {
-					this->error("error: runtime");
 				} catch (const std::exception &exception) {
-					this->error("exception");
+					this->error();
 				}
 			}
 		}
@@ -96,8 +91,8 @@ void Shell::errorNaN() {
 	std::exit(EXIT_FAILURE);
 }
 
-void Shell::error(char* error) {
-	std::cout << error << std::endl;
+void Shell::error() {
+	std::cout << "error: exception" << std::endl;
 	std::exit(EXIT_FAILURE);
 }
 
