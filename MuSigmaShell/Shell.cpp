@@ -21,13 +21,14 @@
 
 namespace paolomococci {
 
-Shell::Shell(int argc, char** argv) {
+Shell::Shell(int argc, char **argv) {
 	this->argIndex = argc;
 	this->argVector = argv;
+	this->values = new std::vector<double>;
 }
 
 Shell::~Shell() {
-	// TODO destructor
+	delete this->values;
 }
 
 int Shell::getArgIndex() {
@@ -39,8 +40,26 @@ char** Shell::getArgVector() {
 }
 
 bool Shell::verify() {
+	int dotCount = 0;
+	bool check = true;
 	// TODO
-	return true;
+	return check;
+}
+
+std::vector<double> Shell::getValues() {
+	return this->values;
+}
+
+void Shell::errorNaN() {
+	std::cout
+		<< "error: the second argument on command line is not a number"
+		<< std::endl;
+	std::exit(EXIT_FAILURE);
+}
+
+void Shell::error(char* error) {
+	std::cout << error << std::endl;
+	std::exit(EXIT_FAILURE);
 }
 
 }
