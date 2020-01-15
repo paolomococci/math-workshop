@@ -17,6 +17,10 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <cstdlib>
+#include <iostream>
+#include <vector>
+
 #ifndef SHELL_H_
 #define SHELL_H_
 
@@ -33,9 +37,13 @@ public:
 	int getArgIndex();
 	char** getArgVector();
 	bool verify();
+	std::vector<double> getValues();
+	void errorNaN();
+	void error(char* error);
 private:
 	int argIndex;
 	char** argVector;
+	std::vector<double> values;
 };
 
 }
