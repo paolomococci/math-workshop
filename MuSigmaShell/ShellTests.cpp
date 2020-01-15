@@ -17,8 +17,12 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <cassert>
+
 #include "Shell.h"
 
 namespace paolomococci {
-
+	int argc = 2;
+	char** argv = {"", "12.5"};
+	paolomococci::Shell shell(argc, argv);
 }
