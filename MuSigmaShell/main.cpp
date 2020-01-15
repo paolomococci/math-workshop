@@ -20,14 +20,12 @@
 #include <iostream>
 
 #include "Main.h"
-#include "Shell.h"
 
 using namespace std;
 using namespace paolomococci;
 
 int main(int argc, char** argv) {
 
-	paolomococci::Shell shell(argc, argv);
 	paolomococci::Main main;
 
 	main.getHello();
