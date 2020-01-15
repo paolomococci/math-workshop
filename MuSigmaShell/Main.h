@@ -17,6 +17,8 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <iostream>
+
 #include "Shell.h"
 
 #ifndef MAIN_H_
