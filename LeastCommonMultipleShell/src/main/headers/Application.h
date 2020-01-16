@@ -17,8 +17,8 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef APP_H
-#define APP_H
+#ifndef APPLICATION_H
+#define APPLICATION_H
 
 #include <string>
 
