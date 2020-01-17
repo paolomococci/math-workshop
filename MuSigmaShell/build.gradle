@@ -1,0 +1,16 @@
+plugins {
+    id 'cpp-application'
+    id 'cpp-unit-test'
+    id 'eclipse'
+}
+
+application {
+    targetMachines.add(machines.linux.x86_64)
+}
+
+tasks.withType(CppCompile).configureEach {
+	macros.put("NDEBUG", null)
+	compilerArgs.add '-std=c++11'
+	compilerArgs.add '-Wall'
+	compilerArgs.add '-Wextra'
+}
