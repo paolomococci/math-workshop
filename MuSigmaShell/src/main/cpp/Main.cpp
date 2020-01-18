@@ -29,8 +29,20 @@ Main::~Main() {
 	// TODO destructor
 }
 
-std::string Main::getHello() {
-	return "hello";
+void Main::setArgIndex(int argc) {
+	this->argIndex = argc;
+}
+void Main::setArgVector(char** argv) {
+	this->argVector = argv;
+}
+
+bool Main::execute() {
+	bool check = false;
+	this->shell.setArgIndex(this->argIndex);
+	this->shell.setArgVector(this->argVector);
+	// TODO
+	if (this->shell.getValues().empty()) check = true;
+	return check;
 }
 
 }
