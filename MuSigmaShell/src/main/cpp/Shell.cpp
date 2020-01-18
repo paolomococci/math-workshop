@@ -21,6 +21,10 @@
 
 namespace paolomococci {
 
+Shell::Shell() {
+
+}
+
 Shell::Shell(int argc, char **argv) {
 	this->argIndex = argc;
 	this->argVector = argv;
@@ -28,6 +32,14 @@ Shell::Shell(int argc, char **argv) {
 
 Shell::~Shell() {
 
+}
+
+void Shell::setArgIndex(int argc) {
+	this->argIndex = argc;
+}
+
+void Shell::setArgVector(char** argv) {
+	this->argVector = argv;
 }
 
 int Shell::getArgIndex() {
