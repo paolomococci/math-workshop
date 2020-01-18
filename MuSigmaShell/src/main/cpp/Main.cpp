@@ -19,24 +19,18 @@
 
 #include "Main.h"
 
-using namespace std;
-
 namespace paolomococci {
 
 Main::Main() {
 
 }
 
-Main::Main(int argc, char** argv) {
-	paolomococci::Shell shell(argc, argv);
-}
-
 Main::~Main() {
 	// TODO destructor
 }
 
-void Main::getHello() {
-	std::cout << "hello" << std::endl;
+std::string Main::getHello() {
+	return "hello";
 }
 
 }
