@@ -20,6 +20,8 @@
 #include <iostream>
 #include <string>
 
+#include "Shell.h"
+
 #ifndef MAIN_H
 #define MAIN_H
 
@@ -28,9 +30,16 @@ namespace paolomococci {
 class Main {
 public:
 	Main();
-	Main(int argc, char** argv);
 	virtual ~Main();
-	std::string getHello();
+	void setArgIndex(int argc);
+	void setArgVector(char** argv);
+	bool execute();
+private:
+	int argIndex;
+	char** argVector;
+	paolomococci::Shell shell;
+	double mu;
+	double sigma;
 };
 
 }
