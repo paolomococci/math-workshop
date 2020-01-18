@@ -18,11 +18,10 @@
  */
 
 #include <iostream>
+#include <string>
 
-#include "Shell.h"
-
-#ifndef MAIN_H_
-#define MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
 
 namespace paolomococci {
 
@@ -31,7 +30,7 @@ public:
 	Main();
 	Main(int argc, char** argv);
 	virtual ~Main();
-	void getHello();
+	std::string getHello();
 };
 
 }
