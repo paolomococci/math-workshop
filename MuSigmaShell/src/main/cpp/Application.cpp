@@ -20,8 +20,11 @@
 #include "Application.h"
 #include "Main.h"
 
-int main() {
+int main(int argc, char** argv) {
 	paolomococci::Main main;
-	std::cout << main.getHello() << std::endl;
+	main.setArgIndex(argc);
+	main.setArgVector(argv);
+	std::cout << "main.execute: " << main.execute() << std::endl;
+	//if (!main.execute()) std::exit(EXIT_FAILURE);
 	std::exit(EXIT_SUCCESS);
 }
