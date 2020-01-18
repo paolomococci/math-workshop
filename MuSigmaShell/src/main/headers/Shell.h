@@ -28,12 +28,11 @@ namespace paolomococci {
 
 class Shell {
 public:
+	Shell();
 	Shell(int argc, char** argv);
 	virtual ~Shell();
-	Shell(const Shell &other);
-	Shell(Shell &&other);
-	Shell& operator=(const Shell &other);
-	Shell& operator=(Shell &&other);
+	void setArgIndex(int argc);
+	void setArgVector(char** argv);
 	int getArgIndex();
 	char** getArgVector();
 	void verify();
