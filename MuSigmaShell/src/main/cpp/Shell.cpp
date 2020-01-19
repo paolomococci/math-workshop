@@ -51,6 +51,7 @@ char** Shell::getArgVector() {
 }
 
 void Shell::verify() {
+	// TODO
 	int dotCount = 0;
 	if (this->argIndex > 1) {
 		for (int index = 1; index < this->argIndex; index++) {
@@ -92,8 +93,26 @@ void Shell::verify() {
 	}
 }
 
+void Shell::show() {
+	std::vector<double>::iterator valuesIterator;
+	valuesIterator = this->values.begin();
+	std::cout << '{';
+	while (valuesIterator != this->values.end()) {
+		std::cout << *valuesIterator;
+		++valuesIterator;
+		if (valuesIterator != this->values.end()) {
+			std::cout << ',';
+		}
+	}
+	std::cout << '}' << std::endl;
+}
+
 std::vector<double> Shell::getValues() {
 	return this->values;
+}
+
+std::vector<double>::iterator Shell::getIteratorOfValues() {
+	return this->values.begin();
 }
 
 void Shell::errorNaN() {
