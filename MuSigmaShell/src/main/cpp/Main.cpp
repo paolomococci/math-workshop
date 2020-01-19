@@ -40,6 +40,8 @@ bool Main::execute() {
 	bool check = false;
 	this->shell.setArgIndex(this->argIndex);
 	this->shell.setArgVector(this->argVector);
+	this->shell.verify();
+	this->shell.show();
 	// TODO
 	if (this->shell.getValues().empty()) check = true;
 	return check;
