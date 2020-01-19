@@ -50,8 +50,7 @@ char** Shell::getArgVector() {
 	return this->argVector;
 }
 
-void Shell::verify() {
-	// TODO
+void Shell::parsing() {
 	int dotCount = 0;
 	if (this->argIndex > 1) {
 		for (int index = 1; index < this->argIndex; index++) {
@@ -80,7 +79,7 @@ void Shell::verify() {
 				}
 				if (dotCount > 1) this->errorNaN();
 				try {
-					this->values.push_back(atof(this->argVector[1]));
+					this->values.push_back(atof(this->argVector[index]));
 				} catch (const std::exception &exception) {
 					this->error();
 				}
