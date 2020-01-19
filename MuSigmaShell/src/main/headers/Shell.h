@@ -36,7 +36,9 @@ public:
 	int getArgIndex();
 	char** getArgVector();
 	void verify();
+	void show();
 	std::vector<double> getValues();
+	std::vector<double>::iterator getIteratorOfValues();
 	void errorNaN();
 	void error();
 private:
