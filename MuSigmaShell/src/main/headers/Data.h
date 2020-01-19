@@ -17,8 +17,8 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef DATA_H_
-#define DATA_H_
+#ifndef DATA_H
+#define DATA_H
 
 namespace paolomococci {
 
