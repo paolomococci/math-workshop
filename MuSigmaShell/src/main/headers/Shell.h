@@ -35,7 +35,7 @@ public:
 	void setArgVector(char** argv);
 	int getArgIndex();
 	char** getArgVector();
-	void verify();
+	void parsing();
 	void show();
 	std::vector<double> getValues();
 	std::vector<double>::iterator getIteratorOfValues();
