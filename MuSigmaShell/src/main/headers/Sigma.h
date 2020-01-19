@@ -17,8 +17,8 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef SIGMA_H_
-#define SIGMA_H_
+#ifndef SIGMA_H
+#define SIGMA_H
 
 namespace paolomococci {
 
