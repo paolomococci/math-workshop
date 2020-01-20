@@ -21,6 +21,7 @@
 #include <string>
 
 #include "Shell.h"
+#include "Mu.h"
 
 #ifndef MAIN_H
 #define MAIN_H
@@ -38,7 +39,7 @@ private:
 	int argIndex;
 	char** argVector;
 	paolomococci::Shell shell;
-	double mu;
+	paolomococci::Mu mu;
 	double sigma;
 };
 
