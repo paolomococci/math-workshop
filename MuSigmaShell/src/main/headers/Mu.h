@@ -17,6 +17,9 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <iostream>
+#include <vector>
+
 #ifndef MU_H
 #define MU_H
 
@@ -26,6 +29,10 @@ class Mu {
 public:
 	Mu();
 	virtual ~Mu();
+	bool setValues(std::vector<double> values);
+	void showValues();
+private:
+	std::vector<double> values;
 };
 
 }
