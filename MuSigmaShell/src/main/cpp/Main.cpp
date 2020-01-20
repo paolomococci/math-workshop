@@ -42,8 +42,9 @@ bool Main::execute() {
 	this->shell.setArgVector(this->argVector);
 	this->shell.parsing();
 	this->shell.show();
+	check = this->mu.setValues(this->shell.getValues());
+	this->mu.showValues();
 	// TODO
-	if (this->shell.getValues().empty()) check = true;
 	return check;
 }
 
