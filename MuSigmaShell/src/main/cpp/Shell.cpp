@@ -51,43 +51,25 @@ char** Shell::getArgVector() {
 }
 
 void Shell::parsing() {
-	int dotCount = 0;
 	if (this->argIndex > 1) {
-		for (int index = 1; index < this->argIndex; index++) {
-			char *charPointer = this->argVector[index];
-			while (*charPointer != '\0') {
-				switch (*charPointer) {
-					case '.':
-						dotCount++;
-						charPointer++;
-						break;
-					case '0':
-					case '1':
-					case '2':
-					case '3':
-					case '4':
-					case '5':
-					case '6':
-					case '7':
-					case '8':
-					case '9':
-						charPointer++;
-						break;
-					default:
-						this->errorNaN();
-						break;
-				}
-				if (dotCount > 1) this->errorNaN();
-				try {
-					this->values.push_back(atof(this->argVector[index]));
-				} catch (const std::exception &exception) {
-					this->error();
-				}
+		for (int index = 1; index < this->argIndex; ++index) {
+			this->tokens.push_back(std::string(this->argVector[index]));
+		}
+		for (auto token : tokens) {
+			try {
+				this->values.push_back(std::stod(token));
+			} catch (const std::invalid_argument& invalidArgument) {
+				std::cerr
+					<< "error: invalid argument "
+					<< invalidArgument.what()
+					<< " at least one argument passed to MuSigmaShell is not a number"
+					<< std::endl;
+				std::exit(EXIT_FAILURE);
 			}
 		}
 	} else {
 		std::cout
-			<< "oversight: please enter a number after the command"
+			<< "oversight: please, enter a number series after the command"
 			<< std::endl;
 	}
 }
@@ -112,18 +94,6 @@ std::vector<double> Shell::getValues() {
 
 std::vector<double>::iterator Shell::getIteratorOfValues() {
 	return this->values.begin();
-}
-
-void Shell::errorNaN() {
-	std::cout
-		<< "error: the second argument on command line is not a number"
-		<< std::endl;
-	std::exit(EXIT_FAILURE);
-}
-
-void Shell::error() {
-	std::cout << "error: exception" << std::endl;
-	std::exit(EXIT_FAILURE);
 }
 
 }
