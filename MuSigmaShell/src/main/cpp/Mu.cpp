@@ -21,13 +21,27 @@
 
 namespace paolomococci {
 
-Mu::Mu() {
-	// TODO constructor
+Mu::Mu() {}
 
+Mu::~Mu() {}
+
+bool Mu::setValues(std::vector<double> values) {
+	this->values = values;
+	return !(this->values.empty());
 }
 
-Mu::~Mu() {
-	// TODO destructor
+void Mu::showValues() {
+	std::vector<double>::iterator valuesIterator;
+	valuesIterator = this->values.begin();
+	std::cout << '{';
+	while (valuesIterator != this->values.end()) {
+		std::cout << *valuesIterator;
+		++valuesIterator;
+		if (valuesIterator != this->values.end()) {
+			std::cout << ',';
+		}
+	}
+	std::cout << '}' << std::endl;
 }
 
 }
