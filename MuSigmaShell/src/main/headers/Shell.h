@@ -19,6 +19,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <string>
 #include <vector>
 
 #ifndef SHELL_H
@@ -39,11 +40,10 @@ public:
 	void show();
 	std::vector<double> getValues();
 	std::vector<double>::iterator getIteratorOfValues();
-	void errorNaN();
-	void error();
 private:
 	int argIndex;
 	char** argVector;
+	std::vector<std::string> tokens;
 	std::vector<double> values;
 };
 
