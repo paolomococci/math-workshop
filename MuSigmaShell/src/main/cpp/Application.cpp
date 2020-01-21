@@ -24,10 +24,6 @@ int main(int argc, char** argv) {
 	paolomococci::Main main;
 	main.setArgIndex(argc);
 	main.setArgVector(argv);
-	std::cout
-		<< main.execute()
-		<< " boolean return value of main.execute()"
-		<< std::endl;
 	//if (!main.execute()) std::exit(EXIT_FAILURE);
 	std::exit(EXIT_SUCCESS);
 }
