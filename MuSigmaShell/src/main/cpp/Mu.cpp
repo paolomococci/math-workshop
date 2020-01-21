@@ -44,4 +44,18 @@ void Mu::showValues() {
 	std::cout << '}' << std::endl;
 }
 
+void Mu::computeAverage() {
+	std::vector<double>::iterator valuesIterator;
+	valuesIterator = this->values.begin();
+	while (valuesIterator != this->values.end()) {
+		this->average += *valuesIterator;
+		++valuesIterator;
+	}
+	this->average /= this->values.size();
+}
+
+double Mu::getAverage() {
+	return this->average;
+}
+
 }
