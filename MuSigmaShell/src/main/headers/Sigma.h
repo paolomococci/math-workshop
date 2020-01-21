@@ -17,6 +17,10 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <cmath>
+#include <iostream>
+#include <vector>
+
 #ifndef SIGMA_H
 #define SIGMA_H
 
@@ -26,6 +30,13 @@ class Sigma {
 public:
 	Sigma();
 	virtual ~Sigma();
+	bool setValues(std::vector<double> values);
+	void showValues();
+	void computeStandardDeviation();
+	double getStandardDeviation();
+private:
+	std::vector<double> values;
+	double standardDeviation = 0.0;
 };
 
 }
