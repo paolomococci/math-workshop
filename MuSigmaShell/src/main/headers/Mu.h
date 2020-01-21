@@ -31,8 +31,11 @@ public:
 	virtual ~Mu();
 	bool setValues(std::vector<double> values);
 	void showValues();
+	void computeAverage();
+	double getAverage();
 private:
 	std::vector<double> values;
+	double average = 0.0;
 };
 
 }
