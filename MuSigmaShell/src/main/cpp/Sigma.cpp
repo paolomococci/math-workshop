@@ -21,13 +21,44 @@
 
 namespace paolomococci {
 
-Sigma::Sigma() {
-	// TODO constructor
-
-}
+Sigma::Sigma() {}
 
 Sigma::~Sigma() {
-	// TODO destructor
+}
+
+bool Sigma::setValues(std::vector<double> values) {
+	this->values = values;
+	return !(this->values.empty());
+}
+
+void Sigma::showValues() {
+	std::vector<double>::iterator valuesIterator;
+	valuesIterator = this->values.begin();
+	std::cout << '{';
+	while (valuesIterator != this->values.end()) {
+		std::cout << *valuesIterator;
+		++valuesIterator;
+		if (valuesIterator != this->values.end()) {
+			std::cout << ',';
+		}
+	}
+	std::cout << '}' << std::endl;
+}
+
+void Sigma::computeStandardDeviation() {
+	std::vector<double>::iterator valuesIterator;
+	valuesIterator = this->values.begin();
+	double numerosity = (double) this->values.size();
+	double temp = 0.0;
+	while (valuesIterator != this->values.end()) {
+		temp += std::pow(*valuesIterator, 2.0) / numerosity;
+		++valuesIterator;
+	}
+	this->standardDeviation = std::sqrt(temp - numerosity * numerosity);
+}
+
+double Sigma::getStandardDeviation() {
+	return this->standardDeviation;
 }
 
 }
