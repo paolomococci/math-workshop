@@ -22,6 +22,7 @@
 
 #include "Shell.h"
 #include "Mu.h"
+#include "Sigma.h"
 
 #ifndef MAIN_H
 #define MAIN_H
@@ -40,7 +41,7 @@ private:
 	char** argVector;
 	paolomococci::Shell shell;
 	paolomococci::Mu mu;
-	double sigma;
+	paolomococci::Sigma sigma;
 };
 
 }
