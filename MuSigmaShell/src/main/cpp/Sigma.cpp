@@ -46,6 +46,7 @@ void Sigma::showValues() {
 }
 
 void Sigma::computeStandardDeviation() {
+	// TODO
 	std::vector<double>::iterator valuesIterator;
 	valuesIterator = this->values.begin();
 	double numerosity = (double) this->values.size();
