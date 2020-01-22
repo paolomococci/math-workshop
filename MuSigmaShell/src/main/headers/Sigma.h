@@ -31,7 +31,6 @@ public:
 	Sigma();
 	virtual ~Sigma();
 	bool setValues(std::vector<double> values);
-	void showValues();
 	void computeStandardDeviation();
 	double getStandardDeviation();
 private:
