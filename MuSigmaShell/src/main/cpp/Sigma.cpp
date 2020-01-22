@@ -31,31 +31,19 @@ bool Sigma::setValues(std::vector<double> values) {
 	return !(this->values.empty());
 }
 
-void Sigma::showValues() {
-	std::vector<double>::iterator valuesIterator;
-	valuesIterator = this->values.begin();
-	std::cout << '{';
-	while (valuesIterator != this->values.end()) {
-		std::cout << *valuesIterator;
-		++valuesIterator;
-		if (valuesIterator != this->values.end()) {
-			std::cout << ',';
-		}
-	}
-	std::cout << '}' << std::endl;
-}
-
 void Sigma::computeStandardDeviation() {
-	// TODO
 	std::vector<double>::iterator valuesIterator;
 	valuesIterator = this->values.begin();
 	double numerosity = (double) this->values.size();
 	double temp = 0.0;
+	double tempAverage = 0.0;
 	while (valuesIterator != this->values.end()) {
+		tempAverage += *valuesIterator;
 		temp += std::pow(*valuesIterator, 2.0) / numerosity;
 		++valuesIterator;
 	}
-	this->standardDeviation = std::sqrt(temp - numerosity * numerosity);
+	tempAverage /= numerosity;
+	this->standardDeviation = std::sqrt(temp - tempAverage * tempAverage);
 }
 
 double Sigma::getStandardDeviation() {
