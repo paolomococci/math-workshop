@@ -24,6 +24,8 @@ int main(int argc, char** argv) {
 	paolomococci::Main main;
 	main.setArgIndex(argc);
 	main.setArgVector(argv);
-	//if (!main.execute()) std::exit(EXIT_FAILURE);
+	if (!main.execute()) std::exit(EXIT_FAILURE);
+	main.showMuValue();
+	main.showSigmaValue();
 	std::exit(EXIT_SUCCESS);
 }
