@@ -21,9 +21,13 @@
 
 namespace paolomococci {
 
-Main::Main() {}
+Main::Main() {
 
-Main::~Main() {}
+}
+
+Main::~Main() {
+	// TODO destructor
+}
 
 void Main::setArgIndex(int argc) {
 	this->argIndex = argc;
@@ -37,14 +41,20 @@ bool Main::execute() {
 	this->shell.setArgIndex(this->argIndex);
 	this->shell.setArgVector(this->argVector);
 	this->shell.parsing();
-	this->shell.show();
-	this->mu.setValues(this->shell.getValues());
+	check = (
+		this->mu.setValues(this->shell.getValues()) &&
+		this->sigma.setValues(this->shell.getValues())
+	);
 	this->mu.computeAverage();
-	this->sigma.setValues(this->shell.getValues());
 	this->sigma.computeStandardDeviation();
-	std::cout << "average: " << this->mu.getAverage() << std::endl;
-	std::cout << "standard deviation: " << this->sigma.getStandardDeviation() << std::endl;
 	return check;
+}
+
+void Main::showMuValue() {
+	std::cout << "average: " << this->mu.getAverage() << std::endl;
+}
+void Main::showSigmaValue() {
+	std::cout << "standard deviation: " << this->sigma.getStandardDeviation() << std::endl;
 }
 
 }
