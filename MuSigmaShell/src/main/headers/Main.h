@@ -36,6 +36,8 @@ public:
 	void setArgIndex(int argc);
 	void setArgVector(char** argv);
 	bool execute();
+	void showMuValue();
+	void showSigmaValue();
 private:
 	int argIndex;
 	char** argVector;
