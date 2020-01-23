@@ -25,8 +25,12 @@ std::string paolomococci::Hello::getHello() {
     return "Hi!";
 }
 
-int main () {
+int main (int argc, char** argv) {
     paolomococci::Hello hello;
+	paolomococci::Main main;
+	main.setArgIndex(argc);
+	main.setArgVector(argv);
+	if (!main.execute()) std::exit(EXIT_FAILURE);
     std::cout << hello.getHello() << std::endl;
     std::exit(EXIT_SUCCESS);
 }
