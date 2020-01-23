@@ -22,6 +22,8 @@
 
 #include <string>
 
+#include "Main.h"
+
 namespace paolomococci {
     class Hello {
         public:
