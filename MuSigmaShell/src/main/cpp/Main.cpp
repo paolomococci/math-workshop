@@ -21,13 +21,9 @@
 
 namespace paolomococci {
 
-Main::Main() {
+Main::Main() {}
 
-}
-
-Main::~Main() {
-	// TODO destructor
-}
+Main::~Main() {}
 
 void Main::setArgIndex(int argc) {
 	this->argIndex = argc;
