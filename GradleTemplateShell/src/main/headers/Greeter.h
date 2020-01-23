@@ -20,8 +20,8 @@
 #include <cstdlib>
 #include <iostream>
 
-#ifndef GREETER_H_
-#define GREETER_H_
+#ifndef GREETER_H
+#define GREETER_H
 
 namespace paolomococci {
 
