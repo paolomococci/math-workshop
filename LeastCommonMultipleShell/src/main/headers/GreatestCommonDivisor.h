@@ -26,6 +26,13 @@ class GreatestCommonDivisor {
 public:
 	GreatestCommonDivisor();
 	virtual ~GreatestCommonDivisor();
+	bool setValues(std::vector<double> values);
+	void showValues();
+	void computeGreatestCommonDivisor();
+	double getGreatestCommonDivisor();
+private:
+	std::vector<double> values;
+	double greatestCommonDivisor = 0.0;
 };
 
 }
