@@ -26,6 +26,13 @@ class LeastCommonMultiple {
 public:
 	LeastCommonMultiple();
 	virtual ~LeastCommonMultiple();
+	bool setValues(std::vector<double> values);
+	void showValues();
+	void computeLeastCommonMultiple();
+	double getLeastCommonMultiple();
+private:
+	std::vector<double> values;
+	double leastCommonMultiple = 0.0;
 };
 
 }
