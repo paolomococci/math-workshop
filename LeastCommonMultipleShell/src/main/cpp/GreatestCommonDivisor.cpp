@@ -25,4 +25,22 @@ GreatestCommonDivisor::GreatestCommonDivisor() {}
 
 GreatestCommonDivisor::~GreatestCommonDivisor() {}
 
+bool GreatestCommonDivisor::setValues(std::vector<double> values) {
+	// TODO
+	return false;
+}
+
+void GreatestCommonDivisor::showValues() {
+	// TODO
+}
+
+void GreatestCommonDivisor::computeGreatestCommonDivisor() {
+	// TODO
+}
+
+double GreatestCommonDivisor::getGreatestCommonDivisor() {
+	// TODO
+	return 0.0;
+}
+
 }
