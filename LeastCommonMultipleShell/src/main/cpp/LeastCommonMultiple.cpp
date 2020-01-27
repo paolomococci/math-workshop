@@ -25,4 +25,22 @@ LeastCommonMultiple::LeastCommonMultiple() {}
 
 LeastCommonMultiple::~LeastCommonMultiple() {}
 
+bool LeastCommonMultiple::setValues(std::vector<double> values) {
+	// TODO
+	return false;
+}
+
+void LeastCommonMultiple::showValues() {
+	// TODO
+}
+
+void LeastCommonMultiple::computeLeastCommonMultiple() {
+	// TODO
+}
+
+double LeastCommonMultiple::getLeastCommonMultiple() {
+	// TODO
+	return 0.0;
+}
+
 }
