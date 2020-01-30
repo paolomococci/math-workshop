@@ -17,6 +17,9 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <iostream>
+#include <vector>
+
 #ifndef GREATESTCOMMONDIVISOR_H
 #define GREATESTCOMMONDIVISOR_H
 
@@ -29,10 +32,10 @@ public:
 	bool setValues(std::vector<double> values);
 	void showValues();
 	void computeGreatestCommonDivisor();
-	double getGreatestCommonDivisor();
+	long getGreatestCommonDivisor();
 private:
 	std::vector<double> values;
-	double greatestCommonDivisor = 0.0;
+	long greatestCommonDivisor = 0.0;
 };
 
 }
