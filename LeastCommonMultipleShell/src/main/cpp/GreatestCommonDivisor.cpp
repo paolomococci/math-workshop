@@ -44,6 +44,11 @@ void GreatestCommonDivisor::showValues() {
 	std::cout << '}' << std::endl;
 }
 
+long GreatestCommonDivisor::gcd(long argOne, long argTwo) {
+	// TODO
+	return 0;
+}
+
 void GreatestCommonDivisor::computeGreatestCommonDivisor() {
 	// TODO
 }
