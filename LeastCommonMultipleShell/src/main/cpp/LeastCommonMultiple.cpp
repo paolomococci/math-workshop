@@ -44,6 +44,11 @@ void LeastCommonMultiple::showValues() {
 	std::cout << '}' << std::endl;
 }
 
+long LeastCommonMultiple::lcm(long argOne, long argTwo) {
+	// TODO
+	return 0;
+}
+
 void LeastCommonMultiple::computeLeastCommonMultiple() {
 	// TODO
 }
