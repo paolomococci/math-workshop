@@ -17,6 +17,9 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <iostream>
+#include <vector>
+
 #ifndef LEASTCOMMONMULTIPLE_H
 #define LEASTCOMMONMULTIPLE_H
 
@@ -29,10 +32,10 @@ public:
 	bool setValues(std::vector<double> values);
 	void showValues();
 	void computeLeastCommonMultiple();
-	double getLeastCommonMultiple();
+	long getLeastCommonMultiple();
 private:
 	std::vector<double> values;
-	double leastCommonMultiple = 0.0;
+	long leastCommonMultiple = 0.0;
 };
 
 }
