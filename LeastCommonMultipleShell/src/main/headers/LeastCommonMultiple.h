@@ -35,8 +35,9 @@ public:
 	long getLeastCommonMultiple();
 private:
 	long lcm(long argOne, long argTwo);
+	long gcd(long argOne, long argTwo);
 	std::vector<double> values;
-	long leastCommonMultiple = 0L;
+	long leastCommonMultiple = 1L;
 };
 
 }
