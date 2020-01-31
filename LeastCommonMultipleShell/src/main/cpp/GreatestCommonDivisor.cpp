@@ -45,8 +45,11 @@ void GreatestCommonDivisor::showValues() {
 }
 
 long GreatestCommonDivisor::gcd(long argOne, long argTwo) {
-	// TODO
-	return 0;
+	if (argTwo == 0) {
+		return argOne;
+	} else {
+		return this->gcd(argTwo, argOne % argTwo);
+	}
 }
 
 void GreatestCommonDivisor::computeGreatestCommonDivisor() {
