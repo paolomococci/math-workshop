@@ -36,7 +36,7 @@ public:
 private:
 	long gcd(long argOne, long argTwo);
 	std::vector<double> values;
-	long greatestCommonDivisor = 0L;
+	long greatestCommonDivisor = 1L;
 };
 
 }
