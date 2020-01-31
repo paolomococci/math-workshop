@@ -45,8 +45,15 @@ void LeastCommonMultiple::showValues() {
 }
 
 long LeastCommonMultiple::lcm(long argOne, long argTwo) {
-	// TODO
-	return 0;
+	return argOne * argTwo / this->gcd(argOne, argTwo);
+}
+
+long LeastCommonMultiple::gcd(long argOne, long argTwo) {
+	if (argTwo == 0) {
+		return argOne;
+	} else {
+		return this->gcd(argTwo, argOne % argTwo);
+	}
 }
 
 void LeastCommonMultiple::computeLeastCommonMultiple() {
