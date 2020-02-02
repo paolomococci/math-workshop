@@ -26,12 +26,17 @@ LeastCommonMultiple::LeastCommonMultiple() {}
 LeastCommonMultiple::~LeastCommonMultiple() {}
 
 bool LeastCommonMultiple::setValues(std::vector<double> values) {
-	this->values = values;
+	std::vector<double>::iterator valuesIterator;
+	valuesIterator = values.begin();
+	while (valuesIterator != values.end()) {
+		this->values.push_back((long) *valuesIterator);
+		++valuesIterator;
+	}
 	return !(this->values.empty());
 }
 
 void LeastCommonMultiple::showValues() {
-	std::vector<double>::iterator valuesIterator;
+	std::vector<long>::iterator valuesIterator;
 	valuesIterator = this->values.begin();
 	std::cout << '{';
 	while (valuesIterator != this->values.end()) {
@@ -57,7 +62,14 @@ long LeastCommonMultiple::gcd(long argOne, long argTwo) {
 }
 
 void LeastCommonMultiple::computeLeastCommonMultiple() {
-	// TODO
+	std::vector<long>::iterator valuesIterator;
+	valuesIterator = this->values.begin();
+	long temp = 1L;
+	while (valuesIterator != this->values.end()) {
+		temp = this->lcm(*valuesIterator, temp);
+		valuesIterator++;
+	}
+	this->leastCommonMultiple = temp;
 }
 
 long LeastCommonMultiple::getLeastCommonMultiple() {
