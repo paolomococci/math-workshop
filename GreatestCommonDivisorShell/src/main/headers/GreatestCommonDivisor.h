@@ -35,7 +35,7 @@ public:
 	long getGreatestCommonDivisor();
 private:
 	long gcd(long argOne, long argTwo);
-	std::vector<double> values;
+	std::vector<long> values;
 	long greatestCommonDivisor = 1L;
 };
 
