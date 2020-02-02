@@ -25,6 +25,9 @@
 #include "Main.h"
 
 namespace paolomococci {
+	class Application {
+		public:
+	};
 }
 
 #endif
