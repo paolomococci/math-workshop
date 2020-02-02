@@ -17,13 +17,12 @@
  * with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <iostream>
-#include <cstdlib>
-
 #ifndef APPLICATION_H
 #define APPLICATION_H
 
 #include <string>
+
+#include "Main.h"
 
 namespace paolomococci {
     class Application {
