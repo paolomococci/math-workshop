@@ -26,12 +26,17 @@ GreatestCommonDivisor::GreatestCommonDivisor() {}
 GreatestCommonDivisor::~GreatestCommonDivisor() {}
 
 bool GreatestCommonDivisor::setValues(std::vector<double> values) {
-	this->values = values;
+	std::vector<double>::iterator valuesIterator;
+	valuesIterator = values.begin();
+	while (valuesIterator != values.end()) {
+		this->values.push_back((long) *valuesIterator);
+		++valuesIterator;
+	}
 	return !(this->values.empty());
 }
 
 void GreatestCommonDivisor::showValues() {
-	std::vector<double>::iterator valuesIterator;
+	std::vector<long>::iterator valuesIterator;
 	valuesIterator = this->values.begin();
 	std::cout << '{';
 	while (valuesIterator != this->values.end()) {
@@ -53,7 +58,14 @@ long GreatestCommonDivisor::gcd(long argOne, long argTwo) {
 }
 
 void GreatestCommonDivisor::computeGreatestCommonDivisor() {
-	// TODO
+	std::vector<long>::iterator valuesIterator;
+	valuesIterator = this->values.begin();
+	long temp = 1L;
+	while (valuesIterator != this->values.end()) {
+		temp = this->gcd(*valuesIterator, temp);
+		valuesIterator++;
+	}
+	this->greatestCommonDivisor = temp;
 }
 
 long GreatestCommonDivisor::getGreatestCommonDivisor() {
