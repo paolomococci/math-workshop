@@ -18,10 +18,13 @@
  */
 
 #include "Application.h"
-#include "Greeter.h"
 
-int main () {
+int main (int argc, char** argv) {
     paolomococci::Greeter greeter;
+	paolomococci::Main main;
+	main.setArgIndex(argc);
+	main.setArgVector(argv);
     std::cout << greeter.greeting() << std::endl;
+	if (!main.execute()) std::exit(EXIT_FAILURE);
     std::exit(EXIT_SUCCESS);
 }
