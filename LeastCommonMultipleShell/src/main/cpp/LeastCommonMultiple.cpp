@@ -30,7 +30,7 @@ bool LeastCommonMultiple::setValues(std::vector<double> values) {
 	valuesIterator = values.begin();
 	while (valuesIterator != values.end()) {
 		this->values.push_back((long) *valuesIterator);
-		++valuesIterator;
+		valuesIterator++;
 	}
 	return !(this->values.empty());
 }
