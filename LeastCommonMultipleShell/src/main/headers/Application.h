@@ -25,10 +25,6 @@
 #include "Main.h"
 
 namespace paolomococci {
-    class Hello {
-        public:
-        std::string getHello();
-    };
 }
 
 #endif
