@@ -19,6 +19,10 @@
 
 #include "Application.h"
 
-int main () {
+int main (int argc, char** argv) {
+	paolomococci::Main main;
+	main.setArgIndex(argc);
+	main.setArgVector(argv);
+	if (!main.execute()) std::exit(EXIT_FAILURE);
     std::exit(EXIT_SUCCESS);
 }
