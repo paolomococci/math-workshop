@@ -22,7 +22,5 @@
 #include "Application.h"
 
 int main() {
-    paolomococci::Hello hello;
-    assert(hello.getHello().compare("Hi!") == 0);
     std::exit(EXIT_SUCCESS);
 }
