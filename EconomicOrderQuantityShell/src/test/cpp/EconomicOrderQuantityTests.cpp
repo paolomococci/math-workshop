@@ -20,10 +20,7 @@
 #include <cassert>
 
 #include "Application.h"
-#include "Greeter.h"
 
 int main() {
-    paolomococci::Greeter greeter;
-    assert(greeter.greeting().compare("Hello, World!") == 0);
     std::exit(EXIT_SUCCESS);
 }
