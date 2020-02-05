@@ -29,4 +29,17 @@ EconomicOrderQuantity::~EconomicOrderQuantity() {
 
 }
 
+EconomicOrderQuantity::bool setValues(std::vector<double> values) {
+	// TODO
+	return false;
+}
+
+EconomicOrderQuantity::void computeEOQ() {
+	// TODO
+}
+EconomicOrderQuantity::long getPurchaseLotQuantity() {
+	//TODO
+	return 0L;
+}
+
 }
