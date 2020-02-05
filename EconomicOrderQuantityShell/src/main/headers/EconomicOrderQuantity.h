@@ -22,6 +22,7 @@
 
 #include <cstdlib>
 #include <iostream>
+#include <vector>
 
 namespace paolomococci {
 
@@ -29,6 +30,20 @@ class EconomicOrderQuantity {
 public:
 	EconomicOrderQuantity();
 	virtual ~EconomicOrderQuantity();
+	bool setValues(std::vector<double> values);
+	void computeEOQ();
+	long getPurchaseLotQuantity();
+private:
+	std::vector<double> values;
+	long purchaseLotQuantity;
+	double annualCostOfUnitStorage;
+	double unitPurchasePrice;
+	double averageQuantityOfProductInStock;
+	double totalCost;
+	double orderingCost;
+	double costOfEachOrder;
+	long quantityToBeOrderedDuringTheYear;
+	long numberOfPurchaseOrdersToBeMadeDuringTheYear;
 };
 
 }
