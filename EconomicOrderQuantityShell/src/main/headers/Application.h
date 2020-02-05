@@ -23,7 +23,6 @@
 #include <string>
 
 #include "Main.h"
-#include "Greeter.h"
 
 namespace paolomococci {
     class Application {
