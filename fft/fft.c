@@ -22,7 +22,7 @@
 #include <complex.h>
 
 int main(int argc, char **argv) {
-	double PI = atan2(1, 1) * 4;
+	double PI = atan2(1.0, 1.0) * 4.0;
 
 	printf("FFT TODO\n");
 	return 0;
