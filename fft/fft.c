@@ -23,6 +23,7 @@
 
 int main(int argc, char **argv) {
 	const double PI = atan2(1.0, 1.0) * 4.0;
+	double _Complex z;
 
 	printf("FFT TODO\n");
 	return 0;
