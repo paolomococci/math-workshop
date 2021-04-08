@@ -22,6 +22,8 @@
 #include <complex.h>
 
 int main(int argc, char **argv) {
+	double PI = atan2(1, 1) * 4;
+
 	printf("FFT TODO\n");
 	return 0;
 }
