@@ -21,6 +21,10 @@
 #include <math.h>
 #include <complex.h>
 
+static void show() {
+	// TODO
+}
+
 int main(int argc, char **argv) {
 	const double PI = atan2(1.0, 1.0) * 4.0;
 	double _Complex z;
