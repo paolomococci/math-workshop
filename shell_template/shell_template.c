@@ -20,6 +20,6 @@
 #include <stdio.h>
 
 int main(int argc, char **argv) {
-	printf("Hello World\n");
+	printf("this is a simple shell template application\n");
 	return 0;
 }
